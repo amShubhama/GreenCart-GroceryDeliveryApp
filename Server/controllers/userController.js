@@ -37,7 +37,7 @@ export const registerUser = async (req, res) => {
 }
 
 // Login User : /api/user/login
-export const login = async (req, res) => {
+export const userLogin = async (req, res) => {
     try {
         const { email, password } = req.body;
         if (!email || !password) {
@@ -66,7 +66,7 @@ export const login = async (req, res) => {
 }
 
 //Check Auth: /api/user/is-auth
-export const isAuth = async (req, res) => {
+export const isUserAuth = async (req, res) => {
     try {
         const userId = req.userId;
         console.log(userId);
@@ -79,7 +79,7 @@ export const isAuth = async (req, res) => {
 }
 
 //Logout User : /api/user/logout
-export const logout = async (req, res) => {
+export const userLogout = async (req, res) => {
     try {
         res.clearCookie('token', {
             httpOnly: true,
