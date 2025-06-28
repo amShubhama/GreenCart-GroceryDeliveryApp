@@ -5,7 +5,7 @@ import 'dotenv/config';
 import connectDB from './configs/connectDB.js';
 import userRouter from './routes/userRoute.js';
 import sellerRouter from './routes/sellerRoute.js';
-import connectCloudinary from './configs/connectCloudinary.js';
+import connectCloudinary from './configs/cloudinary.js';
 import productRouter from './routes/productRoute.js';
 import cartRouter from './routes/cartRoute.js';
 import addressRouter from './routes/addressRoute.js';
@@ -35,5 +35,5 @@ app.use('/api/order', orderRouter);
 app.listen(port, () => {
     console.log(`App is listen on Port ${port}`);
     connectDB();
-
+    connectCloudinary();
 });

@@ -29,7 +29,7 @@ export const registerUser = async (req, res) => {
                 maxAge: 7 * 24 * 60 * 60 * 1000, // Cookie expiration time 
             }
         );
-        return res.json({ success: true, user: { email: user.email, name: user.name } })
+        return res.json({ success: true, user: { email: user.email, name: user.name }, message: 'Registered Successfully' })
     } catch (error) {
         console.error(error);
         res.json({ success: false, message: error.message });
@@ -58,7 +58,7 @@ export const userLogin = async (req, res) => {
             sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'strict',
             maxAge: 7 * 24 * 60 * 60 * 1000,
         });
-        return res.json({ success: true, user: { email: user.email, name: user.name } });
+        return res.json({ success: true, message: 'Logged In', user: { email: user.email, name: user.name } });
     } catch (error) {
         console.error(error);
         res.send(error.message);
@@ -69,7 +69,6 @@ export const userLogin = async (req, res) => {
 export const isUserAuth = async (req, res) => {
     try {
         const userId = req.userId;
-        console.log(userId);
         const user = await User.findById(userId).select('-password');
         return res.json({ success: true, user });
     } catch (error) {
