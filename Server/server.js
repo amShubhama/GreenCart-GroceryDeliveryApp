@@ -15,6 +15,10 @@ import { stripeWebhooks } from './controllers/orderController.js';
 const app = express();
 const port = process.env.port || 4000;
 
+//connections
+await connectDB();
+connectCloudinary().then(() => console.log('Cloudinary is connected successfully...'));
+
 // Allow multiple origins
 const allowedOrigins = ['http://localhost:5173', 'https://green-cart-lime.vercel.app'];
 
@@ -39,7 +43,4 @@ app.use('/api/order', orderRouter);
 
 app.listen(port, async () => {
     console.log(`App is listen on Port ${port}`);
-    //connections
-    await connectDB();
-    connectCloudinary().then(() => console.log('Cloudinary is connected successfully...'));
 });
