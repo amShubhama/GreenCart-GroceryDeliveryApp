@@ -54,9 +54,9 @@ const Navbar = () => {
                     <button className="absolute -top-2 -right-3 text-xs text-white bg-primary w-[18px] h-[18px] rounded-full">{getCartCount()}</button>
                 </div>
 
-                {!user ? (<button onClick={() => setShowUserLogin(true)} className="cursor-pointer px-8 py-2 bg-primary hover:bg-primary-dull transition text-white rounded-full">
+                {!user ? (<><button onClick={() => setShowUserLogin(true)} className="cursor-pointer px-8 py-2 bg-primary hover:bg-primary-dull transition text-white rounded-full">
                     Login
-                </button>)
+                </button> <NavLink to={'/seller'}><button className='cursor-pointer bg-primary hover:bg-primary-dull transition text-white rounded-full px-8 py-2'>Seller</button></NavLink> </>)
                     :
                     (
                         <div className='relative group'>
