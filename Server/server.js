@@ -16,7 +16,7 @@ const app = express();
 const port = process.env.port || 4000;
 
 // Allow multiple origins
-const allowedOrigins = ['http://localhost:5173'];
+const allowedOrigins = ['http://localhost:5173', 'https://green-cart-lime.vercel.app'];
 
 //Middleware configurations
 app.use(express.json());
