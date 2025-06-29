@@ -22,7 +22,7 @@ connectCloudinary().then(() => console.log('Cloudinary is connected successfully
 // Allow multiple origins
 const allowedOrigins = ['http://localhost:5173', 'https://green-cart-lime.vercel.app'];
 
-//Stripe webhooks route to verify the order payment
+//Stripe webhooks route to verify payment status (Online)
 app.post('/stripe', express.raw({ type: 'application/json' }), stripeWebhooks);
 
 //Middleware configurations
