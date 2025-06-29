@@ -10,6 +10,7 @@ import productRouter from './routes/productRoute.js';
 import cartRouter from './routes/cartRoute.js';
 import addressRouter from './routes/addressRoute.js';
 import orderRouter from './routes/orderRoute.js';
+import { stripeWebhooks } from './controllers/orderController.js';
 
 const app = express();
 const port = process.env.port || 4000;
@@ -22,6 +23,10 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(cors({ origin: allowedOrigins, credentials: true }));
 
+//Stripe webhooks route to verify the order payment
+app.post('/stripe', express.raw({ type: 'application/json' }), stripeWebhooks);
+
+
 //Routes
 app.get('/', (req, res) => res.send("API's is Working"));
 app.use('/api/user', userRouter);
@@ -32,8 +37,9 @@ app.use('/api/address', addressRouter);
 app.use('/api/order', orderRouter);
 
 
-app.listen(port, () => {
+app.listen(port, async () => {
     console.log(`App is listen on Port ${port}`);
-    connectDB();
-    connectCloudinary();
+    //connections
+    await connectDB();
+    connectCloudinary().then(() => console.log('Cloudinary is connected successfully...'));
 });
