@@ -45,29 +45,44 @@ Secure payments are integrated using **Stripe**.
 ```bash
 git clone https://github.com/amShubhama/GreenCart-GroceryDeliveryApp.git
 cd GreenCart-GroceryDeliveryApp
-Setup Client (Frontend)
+```
+
+### Setup Client (Frontend)  
+```bash
 cd Client
 npm install
 npm run dev
+```
 
-Setup Server (Backend)
+### Setup Server (Backend)  
+```bash
 cd Server
 npm install
 npm start
 ```
-## Environment Variables
 
-### Create a .env file in /Server with:
+---
 
+## 🔑 Environment Variables  
+
+Create a `.env` file inside `/Server` with the following:  
+```env
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 STRIPE_SECRET_KEY=your_stripe_secret_key
+```
 
-##👨‍💻 Contributors
- **Shubham – Backend Development (Node.js, Express, MongoDB, Stripe, APIs, Authentication)
- **Ayush – Frontend Development (React.js, Context API, Responsive UI)
+---
 
-##📌 Future Improvements
- - Wishlist & Favorites feature
- - Order delivery tracking system
- - Email notifications for orders
+## 👨‍💻 Contributors  
+
+- **Shubham** – Backend Development (Node.js, Express, MongoDB, Stripe, APIs, Authentication)  
+- **Ayush** – Frontend Development (React.js, Context API, Responsive UI)  
+
+---
+
+## 📌 Future Improvements  
+
+- Wishlist & Favorites feature  
+- Order delivery tracking system  
+- Email notifications for orders  
