@@ -4,8 +4,7 @@ GreenCart is a full-stack **E-Commerce Grocery Delivery Application** built with
 It provides a seamless shopping experience for customers and a **Seller/Admin Dashboard** for product & order management.  
 Secure payments are integrated using **Stripe**.  
 
-🚀 **Live Demo**: [GreenCart App](https://green-cart-lime.vercel.app/)  
-📂 **GitHub Repo**: [GreenCart Repository](https://github.com/amShubhama/GreenCart-GroceryDeliveryApp)  
+🚀 **Live Demo**: [GreenCart App](https://green-cart-lime.vercel.app/)
 
 ---
 
