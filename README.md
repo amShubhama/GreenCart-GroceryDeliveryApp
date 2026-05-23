@@ -1,59 +1,66 @@
-# 🛒 GreenCart – Grocery Delivery App  
+# GreenCart – Grocery Delivery Application
 
-GreenCart is a full-stack **E-Commerce Grocery Delivery Application** built with the **MERN stack**.  
-It provides a seamless shopping experience for customers and a **Seller/Admin Dashboard** for product & order management.  
-Secure payments are integrated using **Stripe**.  
+GreenCart is a full-stack **E-Commerce Grocery Delivery Platform** built using the **MERN stack**. The application delivers a seamless shopping experience for customers while providing a dedicated **Seller/Admin Dashboard** for product, inventory, and order management. Secure online payments are powered by **Stripe**.
 
-🚀 **Live Demo**: [GreenCart App](https://green-cart-lime.vercel.app/)
+**Live Demo:** [GreenCart App](https://green-cart-lime.vercel.app/)
 
 ---
 
-## ✨ Features  
+## Key Features
 
-### 👥 Customer Features  
-- Browse products by category, price, and offers.  
-- Add to cart, update quantities, and checkout securely.  
-- Stripe integration for online payments.  
-- JWT-based authentication & authorization.  
+### Customer Features
+- Browse products by **category, pricing, and promotional offers**
+- Add items to cart, manage quantities, and complete secure checkout
+- Secure online payments with **Stripe Integration**
+- **JWT-based authentication and authorization** for protected access
 
-### 🛍️ Seller/Admin Dashboard  
-- Add, update, and delete products with images.  
-- Manage categories, offers, and pricing.  
-- Track and manage customer orders.  
-
----
-
-## 🛠️ Tech Stack  
-
-**Frontend (by Ayush)**  
-- React.js, Context API, HTML, CSS  
-- Vite for bundling  
-- Responsive design with reusable components  
-
-**Backend (by Shubham)**  
-- Node.js, Express.js, MongoDB  
-- Stripe Payment Integration (Payment Intents + Webhooks)  
-- JWT Authentication & Middleware Security  
-- RESTful APIs for products, users, and orders  
+### Seller/Admin Dashboard
+- Create, update, and delete products with image management
+- Manage categories, pricing strategies, and promotional offers
+- Monitor, track, and manage customer orders efficiently
 
 ---
 
-## ⚙️ Installation & Setup  
+## Tech Stack
 
-### Clone the repository  
+### Frontend *(Developed by Ayush Saini)*
+- **React.js** — Dynamic and component-based user interface development  
+- **Context API** — Global state management across the application  
+- **Vite** — Fast development environment and optimized production builds  
+- **HTML5 & CSS3** — Responsive, reusable, and scalable UI design  
+
+### Backend *(Developed by Shubham Kumar Gupta)*
+- **Node.js & Express.js** — Scalable backend architecture and API development  
+- **MongoDB** — NoSQL database for flexible data management  
+- **Stripe Integration** — Secure payment processing using Payment Intents and Webhooks  
+- **JWT Authentication & Middleware Security** — Authentication, authorization, and route protection  
+- **RESTful APIs** — Backend services for products, users, orders, and business operations  
+
+---
+
+## Installation & Setup
+
+### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/amShubhama/GreenCart-GroceryDeliveryApp.git
 cd GreenCart-GroceryDeliveryApp
 ```
 
-### Setup Client (Frontend)  
+### 2. Setup Frontend
+
+Navigate to the frontend directory, install dependencies, and start the development server.
+
 ```bash
 cd Client
 npm install
 npm run dev
 ```
 
-### Setup Server (Backend)  
+### 3. Setup Backend
+
+Navigate to the backend directory, install dependencies, and start the server.
+
 ```bash
 cd Server
 npm install
@@ -62,9 +69,10 @@ npm start
 
 ---
 
-## 🔑 Environment Variables  
+## Environment Variables
 
-Create a `.env` file inside `/Server` with the following:  
+Create a `.env` file inside the `Server/` directory and configure the following environment variables:
+
 ```env
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
@@ -73,15 +81,24 @@ STRIPE_SECRET_KEY=your_stripe_secret_key
 
 ---
 
-## 👨‍💻 Contributors  
+## Contributors
 
-- **Shubham** – Backend Development (Node.js, Express, MongoDB, Stripe, APIs, Authentication)  
-- **Ayush** – Frontend Development (React.js, Context API, Responsive UI)  
+### Shubham Kumar Gupta — Backend Developer
+- Designed and implemented the backend architecture using **Node.js, Express.js, and MongoDB**
+- Developed **RESTful APIs**, authentication workflows, and middleware security
+- Integrated **Stripe Payments** using Payment Intents and Webhooks
+- Managed backend business logic, database operations, and server workflows
+
+### Ayush Saini — Frontend Developer
+- Developed the frontend application using **React.js** and **Context API**
+- Built responsive, reusable, and user-friendly UI components
+- Managed client-side state management and interactive user experiences
 
 ---
 
-## 📌 Future Improvements  
+## Future Enhancements
 
-- Wishlist & Favorites feature  
-- Order delivery tracking system  
-- Email notifications for orders  
+- Wishlist & Favorites functionality
+- Real-time order delivery tracking
+- Email notifications and order status updates
+- Improved analytics and dashboard insights
